@@ -1,39 +1,33 @@
-# tslintConfig
+# lint
 
-TypeScript Linting libraries created and maintained by [3angleTech](www.3angle.tech).
-
-
-## Installation
-
-    # For Angular v11 projects.
-    npm install @3angletech/tslint@2 --save-dev
-
-    # For Angular v10 or non-Angular projects.
-    npm install @3angletech/tslint@1 --save-dev
-
+Shareable lint configuration library maintained by [3angle.tech](https://3angle.tech/).
 
 ## Usage
 
-This library contains linting rules for TypeScript, for Angular and for styling.
+For installation and usage:
 
-To use the TypeScript rules, update `tslint.json` to include:
+> https://www.npmjs.com/package/@3angletech/eslint-config
 
-    {
-      "extends": [
-        "@3angletech/tslint/ts",
-        "@3angletech/tslint/angular"
-      ]
-    }
+## Contributing
 
-To use the StyleLint rules, update `.stylelintrc` to include:
+All commits by contributors outside the [3angleTech](https://github.com/3angleTech) team must sign off on their changes:
 
-    {
-      "extends": [
-        "@3angletech/tslint/styles"
-      ]
-    }
+    git commit --signoff
 
-To publish a new version:
+For more information see:
 
-    npm run build
-    npm publish dist/
+* `git commit --help` or https://git-scm.com/docs/git-commit
+* https://developercertificate.org/
+
+## Testing local changes
+
+To test changes to the library, use `npm link` on the `lib` directory in your target project:
+
+    npm link /path/to/@3angletech/lint/lib
+
+## Publishing changes
+
+* Increment the version number in `lib/package.json`.
+* Commit all changes.
+* Add a new git tag with the same version number.
+* Run `npm publish` in the `lib` directory.
