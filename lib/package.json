@@ -1,0 +1,73 @@
+{
+  "name": "@3angletech/eslint-config",
+  "version": "3.0.0-beta.1",
+  "author": {
+    "name": "The 3angle.tech team",
+    "email": "contact@3angle.tech",
+    "url": "https://3angle.tech"
+  },
+  "description": "Shareable lint configuration library",
+  "homepage": "https://github.com/3angleTech/lint#readme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3angleTech/lint/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "lint",
+    "stylelint",
+    "stylelint-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3angleTech/lint.git"
+  },
+  "peerDependencies": {
+    "@angular-eslint/builder": "^12.5.0",
+    "@angular-eslint/eslint-plugin": "^12.5.0",
+    "@angular-eslint/eslint-plugin-template": "^12.5.0",
+    "@angular-eslint/template-parser": "^12.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsdoc": "^36.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-rxjs": "^3.3.7",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.3.5"
+  },
+  "peerDependenciesMeta": {
+    "@angular-eslint/builder": {
+      "optional": true
+    },
+    "@angular-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "@angular-eslint/eslint-plugin-template": {
+      "optional": true
+    },
+    "@angular-eslint/template-parser": {
+      "optional": true
+    },
+    "eslint-plugin-rxjs": {
+      "optional": true
+    },
+    "stylelint": {
+      "optional": true
+    },
+    "stylelint-config-sass-guidelines": {
+      "optional": true
+    },
+    "stylelint-config-standard": {
+      "optional": true
+    }
+  }
+}

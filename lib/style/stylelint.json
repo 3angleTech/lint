@@ -71,7 +71,6 @@
         "ignoreTypes": [
           "/^app-/",
           "/^cdk-/",
-          "/^demo-/",
           "/^ion-/",
           "/^mat-/"
         ]
