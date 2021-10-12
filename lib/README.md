@@ -148,3 +148,4 @@ Or add some extra `package.json` scripts:
 * [ESLint Docs: Configuration Files](https://eslint.org/docs/user-guide/configuring/configuration-files)
   * [Using a configuration from a plugin](https://eslint.org/docs/user-guide/configuring/configuration-files#using-a-configuration-from-a-plugin)
   * [Extending Configuration Files](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files)
+* [eslint-formatter-summary](https://www.npmjs.com/package/eslint-formatter-summary)
