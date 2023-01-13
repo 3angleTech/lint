@@ -17,6 +17,7 @@
 npm-debug.log
 yarn-error.log
 tasks.todo
+lib/.npmrc
 
 # System Files
 .DS_Store
