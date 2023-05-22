@@ -1,6 +1,6 @@
 {
   "name": "@3angletech/eslint-config",
-  "version": "14.2.1",
+  "version": "15.0.0",
   "author": {
     "name": "The 3angle.tech team",
     "email": "contact@3angle.tech",
@@ -24,25 +24,25 @@
     "url": "https://github.com/3angleTech/lint.git"
   },
   "peerDependencies": {
-    "@angular-eslint/builder": "14.4.0",
-    "@angular-eslint/eslint-plugin": "14.4.0",
-    "@angular-eslint/eslint-plugin-template": "14.4.0",
-    "@angular-eslint/template-parser": "14.4.0",
-    "@typescript-eslint/eslint-plugin": "5.49.0",
-    "@typescript-eslint/parser": "5.49.0",
-    "eslint": "8.32.0",
-    "eslint-config-standard": "17.0.0",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsdoc": "39.6.8",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-rxjs": "5.0.2",
-    "eslint-plugin-security": "1.6.0",
-    "eslint-plugin-sonarjs": "0.18.0",
-    "stylelint": "14.16.1",
-    "stylelint-config-sass-guidelines": "9.0.1",
-    "stylelint-config-standard": "29.0.0",
-    "typescript": "4.7.4"
+    "@angular-eslint/builder": "^15.1 || ^16.1",
+    "@angular-eslint/eslint-plugin": "^15.1 || ^16.1",
+    "@angular-eslint/eslint-plugin-template": "^15.1 || ^16.1",
+    "@angular-eslint/template-parser": "^15.1 || ^16.1",
+    "@typescript-eslint/eslint-plugin": "^6.2",
+    "@typescript-eslint/parser": "^6.2",
+    "eslint": "^8.45",
+    "eslint-config-standard": "^17.1",
+    "eslint-plugin-import": "^2.27",
+    "eslint-plugin-jsdoc": "^46.4",
+    "eslint-plugin-node": "^11.1",
+    "eslint-plugin-promise": "^6.1",
+    "eslint-plugin-rxjs": "^5.0",
+    "eslint-plugin-security": "^1.7",
+    "eslint-plugin-sonarjs": "^0.19",
+    "stylelint": "^15.10",
+    "stylelint-config-sass-guidelines": "^10.0",
+    "stylelint-config-standard": "^34.0",
+    "typescript": ">=4.8 <6"
   },
   "peerDependenciesMeta": {
     "@angular-eslint/builder": {
