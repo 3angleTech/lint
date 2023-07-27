@@ -36,12 +36,6 @@
         ]
       }
     ],
-    "order/order": [
-      "dollar-variables",
-      "declarations",
-      "rules"
-    ],
-    "order/properties-alphabetical-order": true,
     "property-no-vendor-prefix": true,
     "selector-class-pattern": [
       "^(?<BLOCK>[a-z]+(?:[a-z0-9]+\\-?)+[a-z0-9]+)(?<ELEMENT>\\_\\_(?:[a-z0-9]+\\-?)+[a-z0-9]+)?(?<MODIFIER>\\-\\-(?:[a-z0-9]+\\-?)+[a-z0-9]+)?$",
