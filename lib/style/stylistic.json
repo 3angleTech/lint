@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "stylistic/at-rule-name-space-after": "always",
+    "stylistic/at-rule-semicolon-space-before": "never",
+    "stylistic/declaration-block-semicolon-newline-after": "always-multi-line",
+    "stylistic/declaration-block-semicolon-newline-before": "never-multi-line",
+    "stylistic/declaration-block-semicolon-space-after": "always-single-line",
+    "stylistic/max-empty-lines": 2,
+    "stylistic/media-feature-parentheses-space-inside": "never",
+    "stylistic/media-feature-range-operator-space-after": "always",
+    "stylistic/media-feature-range-operator-space-before": "never",
+    "stylistic/number-leading-zero": "always",
+    "stylistic/selector-list-comma-newline-after": "always",
+    "stylistic/selector-list-comma-newline-before": "never-multi-line",
+    "stylistic/selector-list-comma-space-after": "always-single-line",
+    "stylistic/selector-list-comma-space-before": "never-single-line",
+    "stylistic/selector-max-empty-lines": 1,
+    "stylistic/string-quotes": "double",
+    "stylistic/value-list-comma-newline-after": "never-multi-line",
+    "stylistic/value-list-comma-newline-before": "never-multi-line",
+    "stylistic/value-list-comma-space-after": "always",
+    "stylistic/value-list-comma-space-before": "never"
+  }
+}

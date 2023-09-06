@@ -1,33 +1,23 @@
 {
   "rules": {
     "at-rule-empty-line-before": null,
-    "at-rule-name-space-after": "always",
     "at-rule-no-vendor-prefix": true,
-    "at-rule-semicolon-space-before": "never",
     "block-closing-brace-empty-line-before": null,
     "block-closing-brace-newline-after": null,
     "block-opening-brace-space-before": null,
     "color-hex-length": null,
     "color-named": "never",
-    "declaration-block-semicolon-newline-after": "always-multi-line",
-    "declaration-block-semicolon-newline-before": "never-multi-line",
-    "declaration-block-semicolon-space-after": "always-single-line",
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": "numeric",
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "length-zero-no-unit": true,
-    "max-empty-lines": 2,
     "max-line-length": null,
     "media-feature-name-no-vendor-prefix": true,
-    "media-feature-parentheses-space-inside": "never",
-    "media-feature-range-operator-space-after": "always",
-    "media-feature-range-operator-space-before": "never",
     "no-descending-specificity": null,
     "no-duplicate-selectors": true,
     "no-empty-source": null,
-    "number-leading-zero": "always",
     "media-feature-name-no-unknown": [
       true,
       {
@@ -40,19 +30,14 @@
     "selector-class-pattern": [
       "^(?<BLOCK>[a-z]+(?:[a-z0-9]+\\-?)+[a-z0-9]+)(?<ELEMENT>\\_\\_(?:[a-z0-9]+\\-?)+[a-z0-9]+)?(?<MODIFIER>\\-\\-(?:[a-z0-9]+\\-?)+[a-z0-9]+)?$",
       {
-        "message": "Use BEM-style selectors (http://getbem.com/naming/)"
+        "message": "Use BEM-style selectors (https://getbem.com/naming/)"
       }
     ],
     "selector-attribute-quotes": "always",
-    "selector-list-comma-newline-after": "always",
-    "selector-list-comma-newline-before": "never-multi-line",
-    "selector-list-comma-space-after": "always-single-line",
-    "selector-list-comma-space-before": "never-single-line",
     "selector-max-attribute": 2,
     "selector-max-class": 4,
     "selector-max-combinators": 4,
     "selector-max-compound-selectors": 4,
-    "selector-max-empty-lines": 1,
     "selector-max-id": 0,
     "selector-max-specificity": null,
     "selector-max-type": 2,
@@ -70,11 +55,7 @@
         ]
       }
     ],
-    "string-quotes": "double",
     "value-keyword-case": "lower",
-    "value-list-comma-newline-after": "never-multi-line",
-    "value-list-comma-newline-before": "never-multi-line",
-    "value-list-comma-space-after": "always",
     "value-no-vendor-prefix": true
   }
 }

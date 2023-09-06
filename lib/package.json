@@ -1,6 +1,6 @@
 {
   "name": "@3angletech/eslint-config",
-  "version": "15.0.1",
+  "version": "15.0.2",
   "author": {
     "name": "The 3angle.tech team",
     "email": "contact@3angle.tech",
@@ -42,6 +42,7 @@
     "stylelint": "^15.10",
     "stylelint-config-sass-guidelines": "^10.0",
     "stylelint-config-standard": "^34.0",
+    "stylelint-stylistic": "^0.4",
     "typescript": ">=4.8 <6"
   },
   "peerDependenciesMeta": {
