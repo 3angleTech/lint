@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "scss/at-mixin-argumentless-call-parentheses": null,
+    "scss/comment-no-empty": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/double-slash-comment-empty-line-before": null
+  }
+}
