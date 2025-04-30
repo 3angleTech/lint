@@ -38,6 +38,7 @@
     "eslint-plugin-security": ">=3.0",
     "eslint-plugin-sonarjs": ">=3.0",
     "stylelint": ">=16.19",
+    "stylelint-config-standard-scss": ">=14.0",
     "typescript": ">=5.5"
   },
   "peerDependenciesMeta": {
