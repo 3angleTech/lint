@@ -3,9 +3,8 @@
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
  */
-const path = require('path');
 
-module.exports = {
+export default {
   extends: [
     'stylelint-config-standard-scss',
     './stylelint.json',

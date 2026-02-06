@@ -2,91 +2,64 @@
  * @file ESLint configuration for angular projects.
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
- *
- * @typedef { import('eslint').Linter.Config } ESLintConfig
  */
-'use strict';
 
-/**
- * @type { ESLintConfig }
- */
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
+import tseslint from 'typescript-eslint';
+import angular from 'angular-eslint';
+import globals from 'globals';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
+import { baseConfig } from '../base.mjs';
+import { angularRules } from './angular-rules.js';
+import { angularTemplateRules } from './angular-template-rules.js';
+import { typescriptRules } from '../../rules/typescript-rules.js';
+import { typescriptSpecRules } from '../../rules/typescript-spec-rules.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+/** @type { import('eslint').Linter.Config[] } */
+export const angularConfig = [
+  ...baseConfig,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...angular.configs.tsRecommended,
+  {
+    name: '3angletech/angular-ts',
+    files: ['**/*.ts'],
+    processor: angular.processInlineTemplates,
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
+    rules: {
+      ...typescriptRules,
+      ...angularRules,
+    },
   },
-  overrides: [
-    {
-      files: [
-        '*.js',
-      ],
-      extends: [
-        '../ecmascript',
-      ],
-    },
-    {
-      // Only apply TypeScript rules to typescript files.
-      files: [
-        '*.ts',
-      ],
-      extends: [
-        '../ecmascript',
-        'plugin:@typescript-eslint/recommended-type-checked',
-        'plugin:@angular-eslint/recommended',
-        'plugin:@angular-eslint/template/process-inline-templates',
-      ],
-      rules: Object.assign(
-        {},
-        require('../shared-eslint/typescript-rules'),
-        require('./angular-rules'),
-      ),
-    },
-    {
-      files: [
-        '*.spec.ts',
-        '*-spec.ts',
-      ],
-      env: {
-        browser: false,
-        es2021: true,
-        node: true,
-      },
-      extends: [
-        '../ecmascript',
-        'plugin:@typescript-eslint/recommended-type-checked',
-        'plugin:@angular-eslint/recommended',
-        'plugin:@angular-eslint/template/process-inline-templates',
-      ],
+  {
+    name: '3angletech/angular-specs',
+    files: ['**/*.spec.ts', '**/__tests__/**/*.ts'],
+    languageOptions: {
       globals: {
-        afterEach: 'readonly',
-        afterAll: 'readonly',
-        beforeEach: 'readonly',
-        beforeAll: 'readonly',
-        describe: 'readonly',
-        expect: 'readonly',
-        it: 'readonly',
-        jasmine: 'readonly',
-        xdescribe: 'readonly',
-        xit: 'readonly',
+        ...globals.jasmine,
       },
-      rules: Object.assign(
-        {},
-        require('../shared-eslint/typescript-rules'),
-        require('../shared-eslint/typescript-spec-rules'),
-        require('./angular-rules'),
-      ),
     },
-    {
-      files: [
-        '*.html',
-      ],
-      extends: [
-        'plugin:@angular-eslint/template/recommended',
-      ],
-      rules: Object.assign(
-        {},
-        require('./angular-template-rules'),
-      ),
+    rules: {
+      ...typescriptSpecRules,
+      ...angularRules,
     },
-  ],
-};
+  },
+  ...angular.configs.templateRecommended,
+  ...angular.configs.templateAccessibility,
+  {
+    name: '3angletech/angular-html-overrides',
+    files: ['**/*.html'],
+    rules: {
+      ...angularTemplateRules,
+    },
+  },
+];

@@ -3,11 +3,9 @@
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
-/**
- * @type { RulesRecord }
- */
-module.exports = {};
+/** @type { RulesRecord } */
+export const nodeRules = {};

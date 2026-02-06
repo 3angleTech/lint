@@ -2,68 +2,57 @@
  * @file Provides default ESLint configuration for node projects.
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
- *
- * @typedef { import('eslint').Linter.Config } ESLintConfig
  */
-'use strict';
 
-/**
- * @type { ESLintConfig }
- */
-module.exports = {
-  env: {
-    browser: false,
-    es2021: true,
-    node: true,
-  },
-  extends: [
-    '../ecmascript',
-  ],
-  rules: Object.assign(
-    {},
-    require('./node-rules'),
-  ),
-  overrides: [
-    {
-      // Only apply TypeScript rules to typescript files.
-      files: '*.ts',
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 2021,
-        project: 'tsconfig.json',
-        sourceType: 'module',
-      },
-      extends: [
-        '../ecmascript',
-        'plugin:@typescript-eslint/recommended-type-checked',
-      ],
-      plugins: [
-        '@typescript-eslint/eslint-plugin',
-      ],
-      rules: Object.assign(
-        {},
-        require('../shared-eslint/typescript-rules'),
-        require('./node-rules'),
-      ),
-    },
-    {
-      files: [
-        '*.spec.ts',
-      ],
-      extends: [
-        '../ecmascript',
-        'plugin:@typescript-eslint/recommended-type-checked',
-      ],
+import tseslint from 'typescript-eslint';
+import globals from 'globals';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
+import { baseConfig } from '../base.mjs';
+import { nodeRules } from './node-rules.js';
+import { typescriptRules } from '../../rules/typescript-rules.js';
+import { typescriptSpecRules } from '../../rules/typescript-spec-rules.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+/** @type { import('eslint').Linter.Config[] } */
+export const nodeConfig = [
+  ...baseConfig,
+  ...tseslint.configs.recommendedTypeChecked,
+  {
+    name: '3angletech/node-base',
+    languageOptions: {
       globals: {
-        describe: 'readonly',
-        it: 'readonly',
+        ...globals.node,
       },
-      rules: Object.assign(
-        {},
-        require('../shared-eslint/typescript-rules'),
-        require('../shared-eslint/typescript-spec-rules'),
-        require('./node-rules'),
-      ),
     },
-  ],
-};
+    rules: {
+      ...nodeRules,
+    },
+  },
+  {
+    name: '3angletech/node-typescript',
+    files: ['**/*.ts'],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
+    rules: {
+      ...typescriptRules,
+      ...nodeRules,
+    },
+  },
+  {
+    name: '3angletech/node-specs',
+    files: ['**/*.spec.ts', '**/__tests__/**/*.ts'],
+    rules: {
+      ...typescriptSpecRules,
+      ...nodeRules,
+    },
+  },
+];

@@ -1,16 +1,14 @@
 /**
- * @file Provides default ESLint configuration for Angular projects.
+ * @file Provides default ESLint configuration for Angular templates.
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
-/**
- * @type { RulesRecord }
- */
-module.exports = {
+/** @type { RulesRecord } */
+export const angularTemplateRules = {
   '@angular-eslint/template/alt-text': 'error',
   '@angular-eslint/template/elements-content': 'error',
   '@angular-eslint/template/label-has-associated-control': 'error',
@@ -29,6 +27,5 @@ module.exports = {
   '@angular-eslint/template/no-any': 'error',
   '@angular-eslint/template/no-call-expression': 'error',
   '@angular-eslint/template/no-positive-tabindex': 'error',
-  // Enable when the rule works with simple string/number arrays.
   '@angular-eslint/template/use-track-by-function': 'off',
 };
