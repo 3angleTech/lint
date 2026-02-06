@@ -1,31 +1,65 @@
 {
-  "name": "3angletech-lint-sources",
+  "name": "@3angletech/eslint-config",
+  "version": "24.0.0",
+  "type": "module",
+  "description": "Shareable Flat ESLint configuration library",
+  "author": "The 3angle.tech team <contact@3angle.tech>",
   "license": "MIT",
-  "private": true,
-  "version": "0.0.0-dev",
+  "homepage": "https://github.com/3angleTech/lint#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3angleTech/lint.git"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./angular": "./src/configs/angular/index.js",
+    "./node": "./src/configs/node/index.js",
+    "./style": "./src/configs/style/index.js",
+    "./base": "./src/configs/base.mjs"
+  },
+  "files": [
+    "src",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "node tests/smoke-test.mjs",
+    "lint": "eslint src",
+    "test:link": "npm link"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0",
+    "typescript": ">=5.0.0",
+    "angular-eslint": ">=21.0.0",
+    "typescript-eslint": ">=8.0.0"
+  },
   "dependencies": {
-    "@angular-eslint/builder": "^19.3",
-    "@angular-eslint/eslint-plugin": "^19.3",
-    "@angular-eslint/eslint-plugin-template": "^19.3",
-    "@angular-eslint/template-parser": "^19.3",
-    "@typescript-eslint/eslint-plugin": "^8.31",
-    "@typescript-eslint/parser": "^8.31",
-    "eslint": "^9.25",
-    "eslint-config-google": "^0.14",
-    "eslint-plugin-import": "^2.31",
-    "eslint-plugin-jsdoc": "^50.6",
-    "eslint-plugin-node": "^11.1",
-    "eslint-plugin-promise": "^7.2",
-    "eslint-plugin-security": "^3.0",
-    "stylelint": "^16.19",
-    "stylelint-config-standard-scss": "^14.0",
-    "typescript": "^5.5"
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "angular-eslint": "^21.2.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.0",
+    "eslint-plugin-promise": "^7.2.0",
+    "eslint-plugin-rxjs": "^5.0.3",
+    "eslint-plugin-security": "^3.0.0",
+    "eslint-plugin-sonarjs": "^3.0.0",
+    "typescript-eslint": "^8.54.0",
+    "globals": "^15.0.0"
   },
   "devDependencies": {
-    "@angular/compiler": "^19.2",
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "@types/eslint": "^9.6",
-    "@types/node": "^22.15"
+    "@types/eslint": "^9.6.0",
+    "@types/node": "^22.15.0",
+    "eslint": "^9.25.0",
+    "typescript": "^5.7.0"
   },
-  "scripts": {}
+  "overrides": {
+    "eslint-plugin-rxjs": {
+      "eslint": "$eslint"
+    },
+    "eslint-etc": {
+      "eslint": "$eslint"
+    }
+  }
 }
