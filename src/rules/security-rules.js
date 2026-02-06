@@ -5,11 +5,11 @@
  *
  * @see https://www.npmjs.com/package/eslint-plugin-security
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
 /** @type { RulesRecord } */
-module.exports = {
+export const securityRules = {
   'security/detect-non-literal-require': 'error',
 };

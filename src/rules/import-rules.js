@@ -4,18 +4,17 @@
  * @licence MIT
  *
  * Base configuration should be extended:
- *    'plugin:import/recommended',
- *    'plugin:import/typescript',
+ * 'plugin:import/recommended',
+ * 'plugin:import/typescript',
  *
  * @see https://www.npmjs.com/package/eslint-plugin-import
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
 /** @type { RulesRecord } */
-module.exports = {
-  // 'import/no-cycle': 'error',
+export const importRules = {
   'import/no-default-export': 'off',
   'import/no-deprecated': 'error',
   'import/no-extraneous-dependencies': [

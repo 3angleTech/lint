@@ -1,14 +1,14 @@
 /**
- * @file Common TypeScript rules for ESLint.
+ * @file Common TypeScript rules for spec files.
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
 /** @type { RulesRecord } */
-module.exports = {
+export const typescriptSpecRules = {
   '@typescript-eslint/no-magic-numbers': 'off',
   'sonarjs/no-identical-functions': 'off',
 };

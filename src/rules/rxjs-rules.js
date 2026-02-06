@@ -4,16 +4,16 @@
  * @licence MIT
  *
  * Base configuration should extended:
- *    'plugin:rxjs/recommended',
+ * 'plugin:rxjs/recommended',
  *
  * @see https://www.npmjs.com/package/eslint-plugin-rxjs
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
 /** @type { RulesRecord } */
-module.exports = {
+export const rxjsRules = {
   'rxjs/no-compat': 'error',
   'rxjs/no-ignored-error': 'warn',
   'rxjs/no-ignored-observable': 'error',
@@ -21,5 +21,5 @@ module.exports = {
   'rxjs/no-ignored-subscription': 'warn',
   'rxjs/no-redundant-notify': 'warn',
   'rxjs/no-subclass': 'error',
-  'rxjs/suffix-subjects': ['error', {'suffix': '$'}],
+  'rxjs/suffix-subjects': ['error', { 'suffix': '$' }],
 };

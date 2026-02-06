@@ -4,18 +4,18 @@
  * @licence MIT
  *
  * Base configuration should be extended:
- *    'plugin:jsdoc/recommended',
+ * 'plugin:jsdoc/recommended',
  *
  * @see https://www.npmjs.com/package/eslint-plugin-jsdoc
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
 /** @type { RulesRecord } */
-module.exports = {
+export const jsdocRules = {
   'jsdoc/check-alignment': 'error',
-  'jsdoc/check-indentation': ['error', {'excludeTags': ['example']}],
+  'jsdoc/check-indentation': ['error', { 'excludeTags': ['example'] }],
   'jsdoc/newline-after-description': 'off',
   'jsdoc/no-types': 'error',
   'jsdoc/tag-lines': 'off',

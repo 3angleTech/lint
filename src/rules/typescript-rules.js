@@ -4,16 +4,16 @@
  * @licence MIT
  *
  * Base configuration should extended:
- *    'plugin:@typescript-eslint/recommended-type-checked',
+ * 'plugin:@typescript-eslint/recommended-type-checked',
  *
  * @see https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
  *
- * @typedef { import('eslint/rules').Linter.RulesRecord } RulesRecord
+ * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
 'use strict';
 
 /** @type { RulesRecord } */
-module.exports = {
+export const typescriptRules = {
   '@typescript-eslint/array-type': [
     'error',
     {
@@ -37,7 +37,7 @@ module.exports = {
   '@typescript-eslint/no-for-in-array': 'error',
   '@typescript-eslint/no-inferrable-types': [
     'off',
-    {'ignoreParameters': true, 'ignoreProperties': true},
+    { 'ignoreParameters': true, 'ignoreProperties': true },
   ],
   '@typescript-eslint/no-redundant-type-constituents': 'off',
   '@typescript-eslint/no-require-imports': 'off',
@@ -50,7 +50,7 @@ module.exports = {
   '@typescript-eslint/promise-function-async': 'off',
   '@typescript-eslint/restrict-plus-operands': 'error',
   '@typescript-eslint/typedef': 'error',
-  '@typescript-eslint/unbound-method': ['error', {ignoreStatic: true}],
+  '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
 
   // NOTE: JavaScript-only rules need to be disabled.
   'dot-notation': 'off',
@@ -60,9 +60,9 @@ module.exports = {
   'no-unused-vars': 'off',
   '@typescript-eslint/no-unused-vars': 'off',
   'no-use-before-define': 'off',
-  '@typescript-eslint/no-use-before-define': ['error', {'variables': true}],
+  '@typescript-eslint/no-use-before-define': ['error', { 'variables': true }],
   'no-shadow': 'off',
-  '@typescript-eslint/no-shadow': ['error', {'hoist': 'all'}],
+  '@typescript-eslint/no-shadow': ['error', { 'hoist': 'all' }],
   'require-await': 'off',
   '@typescript-eslint/require-await': 'error',
   'no-invalid-this': 'off',
