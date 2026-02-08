@@ -1,58 +1,26 @@
 /**
- * @file Common core rules for ESLint.
+ * @file Common core rules for ESLint (Modernized for 2026).
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
- *
- * @typedef { import('eslint').Linter.RulesRecord } CoreRules
  */
-'use strict';
 
-/** @type { CoreRules } */
+/** @type { import('eslint').Linter.RulesRecord } */
 export const coreRules = {
+  // --- Logic & Best Practices (Core ESLint) ---
   'arrow-body-style': 'off',
-  'block-spacing': ['error', 'always'],
-  'brace-style': ['error', '1tbs'],
   'camelcase': 'off',
-  'capitalized-comments': ['error', 'always'],
-  'comma-dangle': ['error', 'always-multiline'],
   'complexity': 'off',
   'constructor-super': 'error',
   'curly': 'error',
   'dot-notation': 'off',
-  'eol-last': 'error',
   'eqeqeq': ['error', 'always'],
   'guard-for-in': 'error',
   'id-denylist': ['error', 'any', 'Number', 'number', 'String', 'string', 'Boolean', 'boolean', 'Undefined', 'undefined'],
   'id-match': 'error',
-  'indent': ['error', 2, {
-    'SwitchCase': 1,
-    'VariableDeclarator': 1,
-    'outerIIFEBody': 1,
-    'MemberExpression': 1,
-    'FunctionDeclaration': { 'parameters': 1, 'body': 1 },
-    'FunctionExpression': { 'parameters': 1, 'body': 1 },
-    'CallExpression': { 'arguments': 1 },
-    'ArrayExpression': 1,
-    'ObjectExpression': 1,
-    'ImportDeclaration': 1,
-    'flatTernaryExpressions': false,
-    'ignoreComments': false,
-    'offsetTernaryExpressions': true
-  }],
-  'linebreak-style': ['error', 'unix'],
   'max-classes-per-file': ['error', 1],
-  'max-len': ['error', {
-    'ignoreUrls': true,
-    'ignorePattern': '^import \\{ .+ \\} from|export \\{ .+ \\} from|class [a-zA-Z0-9]+ implements',
-    'ignoreRegExpLiterals': true,
-    'ignoreStrings': true,
-    'ignoreTemplateLiterals': true,
-    'code': 140,
-  }],
   'max-lines': ['error', 250],
   'max-params': ['error', { 'max': 3 }],
   'max-statements': ['warn', 25],
-  'new-parens': 'error',
   'no-bitwise': 'error',
   'no-caller': 'error',
   'no-cond-assign': 'error',
@@ -68,7 +36,6 @@ export const coreRules = {
   'no-invalid-this': 'error',
   'no-magic-numbers': ['error', { 'ignore': [-1, 0, 1], 'ignoreArrayIndexes': true }],
   'no-multi-str': 'error',
-  'no-multiple-empty-lines': 'error',
   'no-new-func': 'error',
   'no-new-wrappers': 'error',
   'no-param-reassign': 'error',
@@ -82,7 +49,6 @@ export const coreRules = {
   'no-sparse-arrays': 'error',
   'no-template-curly-in-string': 'error',
   'no-throw-literal': 'error',
-  'no-trailing-spaces': 'error',
   'no-undef-init': 'error',
   'no-unsafe-finally': 'error',
   'no-unused-expressions': 'error',
@@ -92,18 +58,51 @@ export const coreRules = {
   'no-var': 'error',
   'no-warning-comments': 'warn',
   'no-with': 'error',
-  'object-curly-spacing': ['error', 'always'],
   'object-shorthand': 'off',
   'one-var': ['error', 'never'],
-  'operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }],
   'prefer-const': 'error',
   'prefer-object-spread': 'error',
   'prefer-template': 'error',
-  'quotes': 'error',
   'radix': 'error',
   'require-await': 'error',
-  'semi': ['error', 'always'],
-  'space-before-function-paren': ['error', { 'anonymous': 'always', 'named': 'never', 'asyncArrow': 'always' }],
-  'spaced-comment': ['error', 'always', { 'markers': ['/'] }],
   'use-isnan': 'error',
+
+  // --- Stylistic & Formatting (@3at/stylistic/js) ---
+  '@3at/stylistic/js/block-spacing': ['error', 'always'],
+  '@3at/stylistic/js/brace-style': ['error', '1tbs'],
+  '@3at/stylistic/js/comma-dangle': ['error', 'always-multiline'],
+  '@3at/stylistic/js/eol-last': 'error',
+  '@3at/stylistic/js/indent': ['error', 2, {
+    'SwitchCase': 1,
+    'VariableDeclarator': 1,
+    'outerIIFEBody': 1,
+    'MemberExpression': 1,
+    'FunctionDeclaration': { 'parameters': 1, 'body': 1 },
+    'FunctionExpression': { 'parameters': 1, 'body': 1 },
+    'CallExpression': { 'arguments': 1 },
+    'ArrayExpression': 1,
+    'ObjectExpression': 1,
+    'ImportDeclaration': 1,
+    'flatTernaryExpressions': false,
+    'ignoreComments': false,
+    'offsetTernaryExpressions': true
+  }],
+  '@3at/stylistic/js/linebreak-style': ['error', 'unix'],
+  '@3at/stylistic/js/max-len': ['error', {
+    'ignoreUrls': true,
+    'ignorePattern': '^import \\{ .+ \\} from|export \\{ .+ \\} from|class [a-zA-Z0-9]+ implements',
+    'ignoreRegExpLiterals': true,
+    'ignoreStrings': true,
+    'ignoreTemplateLiterals': true,
+    'code': 140,
+  }],
+  '@3at/stylistic/js/new-parens': 'error',
+  '@3at/stylistic/js/no-multiple-empty-lines': 'error',
+  '@3at/stylistic/js/no-trailing-spaces': 'error',
+  '@3at/stylistic/js/object-curly-spacing': ['error', 'always'],
+  '@3at/stylistic/js/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }],
+  '@3at/stylistic/js/quotes': ['error', 'single'],
+  '@3at/stylistic/js/semi': ['error', 'always'],
+  '@3at/stylistic/js/space-before-function-paren': ['error', { 'anonymous': 'always', 'named': 'never', 'asyncArrow': 'always' }],
+  '@3at/stylistic/js/spaced-comment': ['error', 'always', { 'markers': ['/'] }],
 };

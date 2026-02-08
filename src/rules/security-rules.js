@@ -4,12 +4,9 @@
  * @licence MIT
  *
  * @see https://www.npmjs.com/package/eslint-plugin-security
- *
- * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
-'use strict';
 
-/** @type { RulesRecord } */
+/** @type { import('eslint').Linter.RulesRecord } */
 export const securityRules = {
   'security/detect-non-literal-require': 'error',
 };

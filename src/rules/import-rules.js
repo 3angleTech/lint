@@ -2,18 +2,9 @@
  * @file Common import rules for ESLint.
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
- *
- * Base configuration should be extended:
- * 'plugin:import/recommended',
- * 'plugin:import/typescript',
- *
- * @see https://www.npmjs.com/package/eslint-plugin-import
- *
- * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
-'use strict';
 
-/** @type { RulesRecord } */
+/** @type { import('eslint').Linter.RulesRecord } */
 export const importRules = {
   'import/no-default-export': 'off',
   'import/no-deprecated': 'error',
@@ -21,9 +12,7 @@ export const importRules = {
     'error',
     {
       devDependencies: true,
-      packageDir: [
-        '.',
-      ],
+      packageDir: ['.'],
     },
   ],
   'import/no-internal-modules': 'off',

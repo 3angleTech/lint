@@ -2,12 +2,9 @@
  * @file Provides default ESLint configuration for Angular projects.
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
- *
- * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
-'use strict';
 
-/** @type { RulesRecord } */
+/** @type { import('eslint').Linter.RulesRecord } */
 export const angularRules = {
   '@angular-eslint/component-max-inline-declarations': 'error',
   '@angular-eslint/contextual-decorator': 'error',
@@ -20,37 +17,7 @@ export const angularRules = {
   '@angular-eslint/relative-url-prefix': 'error',
   '@angular-eslint/use-component-selector': 'error',
   '@angular-eslint/use-component-view-encapsulation': 'error',
-  '@angular-eslint/directive-selector': [
-    'error',
-    {
-      'type': 'attribute',
-      'prefix': 'app',
-      'style': 'camelCase',
-    },
-  ],
-  '@angular-eslint/component-selector': [
-    'error',
-    {
-      'type': 'element',
-      'prefix': 'app',
-      'style': 'kebab-case',
-    },
-  ],
-  '@angular-eslint/pipe-prefix': [
-    'error',
-    {
-      'prefixes': ['app'],
-    },
-  ],
-  'max-len': [
-    'error',
-    {
-      'ignoreUrls': true,
-      'ignorePattern': '^import \\{ .+ \\} from|export \\{ .+ \\} from|class [a-zA-Z0-9]+ implements|^\\s+loadChildren: \\(\\) => import\\(',
-      'ignoreRegExpLiterals': true,
-      'ignoreStrings': true,
-      'ignoreTemplateLiterals': true,
-      'code': 140,
-    },
-  ],
+  '@angular-eslint/directive-selector': ['error', { 'type': 'attribute', 'prefix': 'app', 'style': 'camelCase' }],
+  '@angular-eslint/component-selector': ['error', { 'type': 'element', 'prefix': 'app', 'style': 'kebab-case' }],
+  '@angular-eslint/pipe-prefix': ['error', { 'prefixes': ['app'] }],
 };

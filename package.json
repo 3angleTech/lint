@@ -13,6 +13,7 @@
   "exports": {
     ".": "./src/index.mjs",
     "./angular": "./src/configs/angular/index.js",
+    "./nestjs": "./src/configs/nestjs/index.js",
     "./node": "./src/configs/node/index.js",
     "./style": "./src/configs/style/index.js",
     "./base": "./src/configs/base.mjs"
@@ -20,15 +21,15 @@
   "files": [
     "src",
     "LICENSE.md",
-    "README.md"
+    "README.md",
+    "MIGRATION.md"
   ],
   "engines": {
     "node": ">=24.0.0"
   },
   "scripts": {
     "test": "node tests/smoke-test.mjs",
-    "lint": "eslint src",
-    "test:link": "npm link"
+    "lint": "eslint src"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
@@ -36,13 +37,17 @@
     "angular-eslint": ">=21.0.0",
     "typescript-eslint": ">=8.0.0"
   },
+  "peerDependenciesMeta": {
+    "angular-eslint": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@stylistic/eslint-plugin": "^4.2.0",
     "angular-eslint": "^21.2.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsdoc": "^50.6.0",
     "eslint-plugin-promise": "^7.2.0",
-    "eslint-plugin-rxjs": "^5.0.3",
     "eslint-plugin-security": "^3.0.0",
     "eslint-plugin-sonarjs": "^3.0.0",
     "typescript-eslint": "^8.54.0",
@@ -53,13 +58,5 @@
     "@types/node": "^22.15.0",
     "eslint": "^9.25.0",
     "typescript": "^5.7.0"
-  },
-  "overrides": {
-    "eslint-plugin-rxjs": {
-      "eslint": "$eslint"
-    },
-    "eslint-etc": {
-      "eslint": "$eslint"
-    }
   }
 }

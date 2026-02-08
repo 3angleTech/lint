@@ -2,12 +2,9 @@
  * @file Provides default ESLint configuration for Angular templates.
  * @author THREEANGLE SOFTWARE SOLUTIONS SRL
  * @licence MIT
- *
- * @typedef { import('eslint').Linter.RulesRecord } RulesRecord
  */
-'use strict';
 
-/** @type { RulesRecord } */
+/** @type { import('eslint').Linter.RulesRecord } */
 export const angularTemplateRules = {
   '@angular-eslint/template/alt-text': 'error',
   '@angular-eslint/template/elements-content': 'error',
@@ -16,12 +13,7 @@ export const angularTemplateRules = {
   '@angular-eslint/template/valid-aria': 'error',
   '@angular-eslint/template/click-events-have-key-events': 'error',
   '@angular-eslint/template/conditional-complexity': 'error',
-  '@angular-eslint/template/cyclomatic-complexity': [
-    'error',
-    {
-      'maxComplexity': 6,
-    },
-  ],
+  '@angular-eslint/template/cyclomatic-complexity': ['error', { 'maxComplexity': 6 }],
   '@angular-eslint/template/eqeqeq': 'error',
   '@angular-eslint/template/mouse-events-have-key-events': 'error',
   '@angular-eslint/template/no-any': 'error',
