@@ -3,9 +3,23 @@
   "version": "24.0.0",
   "type": "module",
   "description": "Shareable Flat ESLint configuration library",
-  "author": "The 3angle.tech team <contact@3angle.tech>",
+  "author": {
+    "name": "The 3angle.tech team",
+    "email": "contact@3angle.tech",
+    "url": "https://3angle.tech"
+  },
   "license": "MIT",
   "homepage": "https://github.com/3angleTech/lint#readme",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "lint",
+    "stylelint",
+    "stylelint-config",
+    "typescript",
+    "angular",
+    "nestjs"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/3angleTech/lint.git"
@@ -22,7 +36,8 @@
     "src",
     "LICENSE.md",
     "README.md",
-    "MIGRATION.md"
+    "MIGRATION.md",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": ">=24.0.0"
@@ -39,6 +54,9 @@
   },
   "peerDependenciesMeta": {
     "angular-eslint": {
+      "optional": true
+    },
+    "typescript": {
       "optional": true
     }
   },

@@ -48,7 +48,7 @@ export default {
 
 ## 💻 VS Code Integration
 
-To ensure ESLint handles both linting and formatting (Stylistic) correctly within VS Code, add the following to your `.vscode/settings.json`:
+To ensure ESLint and Stylelint handle both linting and formatting (Stylistic) correctly within VS Code, add the following to your `.vscode/settings.json`:
 
 ```json
 {
@@ -82,7 +82,11 @@ To ensure ESLint handles both linting and formatting (Stylistic) correctly withi
 
   "typescript.format.enable": false,
   "javascript.format.enable": false,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "stylelint.validate": ["css", "scss", "html"],
+  "stylelint.snippet": ["css", "scss"],
+  "stylelint.configFile": "stylelint.config.mjs"
 }
 ```
 
@@ -121,9 +125,9 @@ npm link @3angletech/eslint-config
 
 ### Validation
 Verify configuration integrity:
-'''bash
+```bash
 npm run test
-'''
+```
 
 ---
 
@@ -138,7 +142,7 @@ git tag v24.x.x && git push origin --tags
 ```
 4. Publish:
 ```bash
-npm publish --access public
+npm publish
 ```
 
 ---

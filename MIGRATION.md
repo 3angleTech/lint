@@ -1,4 +1,4 @@
-# Migration Guide: v15 (Legacy) to v24 (Modern)
+# Migration Guide: v19 (Legacy) to v24 (Modern)
 
 This guide covers the transition from legacy CommonJS configurations (`.eslintrc.js`, `.stylelintrc.js`) to the modern ESM Flat Config architecture.
 
