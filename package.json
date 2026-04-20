@@ -1,6 +1,6 @@
 {
   "name": "@3angletech/eslint-config",
-  "version": "24.0.0",
+  "version": "24.1.0",
   "type": "module",
   "description": "Shareable Flat ESLint configuration library",
   "author": {
@@ -67,7 +67,7 @@
     "eslint-plugin-jsdoc": "^50.6.0",
     "eslint-plugin-promise": "^7.2.0",
     "eslint-plugin-security": "^3.0.0",
-    "eslint-plugin-sonarjs": "^3.0.0",
+    "eslint-plugin-sonarjs": "^4.0.3",
     "typescript-eslint": "^8.54.0",
     "globals": "^15.0.0"
   },

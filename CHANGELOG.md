@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [24.1.0] - 2026-04-20
+
+### Fixed
+- **Security**: Updated dependencies to address known vulnerabilities.
+
 ## [24.0.0] - 2026-02-06
 
 ### Added
