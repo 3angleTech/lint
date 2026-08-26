@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [24.2.0] - 2026-08-25
+
+### Changed
+- **Angular 22 support**: widened the `angular-eslint` dependency to `^21.2.0 || ^22.1.0`, so the
+  package dedupes against a consumer on either Angular 21 or Angular 22 instead of forcing a nested
+  `angular-eslint` 21 install. Consumers on Angular 22 no longer need an `overrides` entry.
+- Narrowed the optional `angular-eslint` peer range to `>=21.0.0 <23.0.0`, to match what is actually
+  supported.
+- Raised the `engines.node` floor to `>=24.15.0`, required by `@angular/cli` 22 (pulled in
+  transitively by `angular-eslint` 22).
+
 ## [24.1.0] - 2026-04-20
 
 ### Fixed

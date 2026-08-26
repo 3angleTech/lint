@@ -1,6 +1,6 @@
 {
   "name": "@3angletech/eslint-config",
-  "version": "24.1.0",
+  "version": "24.2.0",
   "type": "module",
   "description": "Shareable Flat ESLint configuration library",
   "author": {
@@ -40,7 +40,7 @@
     "CHANGELOG.md"
   ],
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=24.15.0"
   },
   "scripts": {
     "test": "node tests/smoke-test.mjs",
@@ -49,7 +49,7 @@
   "peerDependencies": {
     "eslint": ">=9.0.0",
     "typescript": ">=5.0.0",
-    "angular-eslint": ">=21.0.0",
+    "angular-eslint": ">=21.0.0 <23.0.0",
     "typescript-eslint": ">=8.0.0"
   },
   "peerDependenciesMeta": {
@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^4.2.0",
-    "angular-eslint": "^21.2.0",
+    "angular-eslint": "^21.2.0 || ^22.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsdoc": "^50.6.0",
     "eslint-plugin-promise": "^7.2.0",
